@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*для работы св-ва, .header зададим left и right*/
+  gap: 30px; /*вдруг эл-ты сожмуться */
+}
+
+.header__logo {
+  width: 120px;
+}
+
+.header__cart {
+  color: var(--dark);
+}

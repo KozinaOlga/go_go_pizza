@@ -1,3 +1,11 @@
+:root {
+	--white: #fff;
+	--beige: #c1ab91;
+	--dark: #2c2826;
+	--orange: #ff8a00;
+	--light: #fbf3e8;
+} 
+
 html {
   position: relative;
   box-sizing: border-box;
@@ -20,9 +28,11 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  font-weight: 400;
   font-size: 16px;
-  color: #000;
-  background-color: #fff;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.4;
 }
 
 
@@ -65,31 +75,19 @@ fieldset {
   margin: 0;
 }
 
-iframe {
-  border: none;
-}
-
-/*
-Доступно скрываю элементы
-*/
-
 .visually-hidden {
   position: fixed;
   transform: scale(0);
 }
 
-
-/*
-Пример контейнера
-
-Если контейнер 1180px по макету,
-то для max-width прибавляем паддинги 30px*2, 
-в итоге 1240px
-Чтобы контент не прижимался к краям экрана
-*/
-
 .container {
-  max-width: 1240px;
-  padding: 0 30px;
+  --offset-container: 14px; /*переменная для отсура*/
+  max-width: calc(1300px + var(--offset-container) * 2); /*чтобы не обрезало ширину 1300,слева и справа 14px(padding)*/
+  padding: 0 var(--offset-container);
   margin: 0 auto;
+}
+
+/*для логотипов*/
+.svg-sprite {
+  display: none;
 }
