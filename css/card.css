@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  padding-top: 35px;
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 50%; /*пицца ровно по середине*/
+  transform: translateX(-50%); /*пицца ровно по середине*/
+  width: 80px;
+}
+
+.card__content {
+  background: var(--white);
+  padding: 48px 8px 8px;
+  border-radius: 16px;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: var(--dark);
+  margin-bottom: 4px;
+
+}
+
+.card__info {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--beige);
+  margin-bottom: 16px;
+}
+
+.card__price {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.card__button {
+  width: 100%;
+  font-size: 14px;
+  color: var(--orange);
+  padding: 8px 24px;
+  background-color: var(--light);
+  border-radius: 32px;
+}

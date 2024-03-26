@@ -1,0 +1,68 @@
+.toppings {
+  padding: 24px 0;
+
+}
+
+.topping__title {
+  position: fixed;
+  transform: scale(0); /*эти два стиля скрывают элемент, и он виден читалкам*/
+}
+
+.toppings__button {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--dark);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.toppings__arrow {/*для разворота стрелки*/
+  transition: transform .3s ease;
+}
+
+.toppings__button_active .toppings__arrow {
+  transform: scaleY(-1);
+}
+
+.toppings__list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 0; /*это для JS*/
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+
+.toppings__list_show {
+  display: flex;
+}
+
+.toppings__item {
+}
+
+.toppings__checkbox {
+  position: absolute; /*скрываем*/
+  appearance: none; /*скрываем checkbox*/
+}
+
+.toppings__label {
+  display: block;
+  background: var(--white);
+  border-radius: 32px;
+  padding: 8px 24px;
+  font-size: 14px;
+  color: var(--beige);
+  border: 1px solid transparent;
+}
+
+.toppings__checkbox:focus-visible+.toppings__label { 
+  background: var(--white);   /*при TAB чтобы видно было где находишься*/
+  border-color: #b66200;
+  color: var(--orange);
+}
+
+.toppings__checkbox:checked+.toppings__label {
+  background: var(--orange);
+  color: var(--light);
+}

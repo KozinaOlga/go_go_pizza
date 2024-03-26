@@ -91,3 +91,9 @@ fieldset {
 .svg-sprite {
   display: none;
 }
+
+@media (width >=540px) {
+  .container {
+    --offset-container: 40px; /*переменная для отсура самого контейнера*/
+  }
+}

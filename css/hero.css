@@ -54,3 +54,34 @@
   font-size: 14px;
   color: var(--orange);
 }
+
+@media (width >= 620px) {
+  .hero {
+    padding: 116px 0 90px;
+    border-radius: 0 0 32px 32px;
+    margin-bottom: 60px; /*расстояние до конца пиццы*/
+  }
+
+  .hero__content {
+    max-width: 544px;
+  }
+
+  .hero__title {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+
+  .hero__tagline {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .hero__order {
+    font-size: 20px;
+  }
+
+  .hero__container:after {
+    bottom: -60px;
+    right: calc(var(--offset-container) + 10px); /*замер от пиццы до конца контейнера*/
+  }
+}
