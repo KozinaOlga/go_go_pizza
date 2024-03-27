@@ -21,7 +21,11 @@
   color: var(--dark);
 }
 
-@media (width >=540px) {
+.header__cart:hover {
+  color: var(--orange);
+}
+
+@media (width >=620px) {
   .header {
     top: 40px;
   }

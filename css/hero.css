@@ -12,11 +12,11 @@
   position: absolute;
   z-index: 2;
   bottom: -43px;
-  right: calc(var(--offset-container) + 7px);
+  right: calc(var(--offset-container) + 7px);(+7это от конца пиццы до карточек, ч/з красную линию)
   width: calc(100vw / (320 / 261));
   height: calc(100vw / (320 / 230));
   max-width: 382px;
-  min-height: 337;
+  max-height: 337px;
   background-image: url(../img/cheese-slice-of-pizza.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -83,5 +83,49 @@
   .hero__container:after {
     bottom: -60px;
     right: calc(var(--offset-container) + 10px); /*замер от пиццы до конца контейнера*/
+  }
+}
+
+@media (width >= 860px) {
+  .hero {
+    padding: 126px 0 80px;
+    margin-bottom: 82px; /*расстояние до конца пиццы*/
+  }
+
+  .hero__content {
+    max-width: 544px;
+  }
+
+  .hero__container:after {
+    bottom: -82px;
+    right: calc(var(--offset-container) - 7px); /*замер от пиццы до конца контейнера*/
+    max-width: 566px;
+    max-height: 499px;
+  }
+}
+
+@media (width >= 1140px) {
+  .hero {
+    padding: 140px 0 100px;
+    margin-bottom: 87px; /*расстояние до конца пиццы*/
+  }
+
+  .hero__content {
+    max-width: 620px;
+  }
+
+  .hero__title {
+    font-size: 80px;
+  }
+
+  .hero__tagline {
+    margin-bottom: 64px;
+  }
+
+  .hero__container:after {
+    bottom: -87px;
+    right: calc(var(--offset-container) + 30px); /*замер от пиццы до конца контейнера(конец контецнера по карточкам)*/
+    max-width: 670px;
+    max-height: 591px;/*max, чтобы гибкость картинки оставалась*/
   }
 }

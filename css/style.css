@@ -92,8 +92,17 @@ fieldset {
   display: none;
 }
 
-@media (width >=540px) {
+@media (width >= 620px) {
   .container {
     --offset-container: 40px; /*переменная для отсура самого контейнера*/
+  }
+}
+
+@media (width >= 860px) {
+}
+
+@media (width >= 1140px) {
+  .container {
+    --offset-container: 70px; /*переменная для отсура самого контейнера*/
   }
 }
