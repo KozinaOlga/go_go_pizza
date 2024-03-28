@@ -48,3 +48,33 @@
   background-color: var(--light);
   border-radius: 32px;
 }
+
+@media (width >= 620px) {
+  .card {
+    padding-top: 46px;
+  }
+  
+  .card__image {
+    width: 180px;
+  }
+  
+  .card__content {
+    padding: 146px 24px 24px;
+    border-radius: 32px;
+  }
+  
+  .card__title {
+    font-size: 24px;
+  
+  }
+  
+  .card__info {
+    gap: 8px;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .card__button {
+    font-size: 20px;
+  }
+}
