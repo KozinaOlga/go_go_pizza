@@ -36,8 +36,45 @@ const getPizzas = async () => {
   }
 };
 
+const createCard = (data) => {
+  const card = document.createElement('article'); /*саздаем article card, что в HTML*/
+  card.classList.add('card');
+
+  card.innerHTML = ` /*вставили данные*/
+  <picture>
+    <source srcset="${data.images[1]}" type="image/webp">
+    <img class="card__image" src="${data.images[0]}" alt="${data.name.ru}">
+  </picture>
+  <div class="card__content">
+    <h3 class="card__title">${data.name.ru}</h3>
+
+    <p class="card__info">
+      <span class="card__price">${data.price.ru['30cm']} ₽</span>
+      <span>/</span>
+      <span class="card__weight">25 см</span>
+    </p>
+
+    <button class="card__button" data-id="${data.id}">Выбрать</button>
+  </div>
+  `;
+
+  return card;
+}
+
 const renderPizzas = async () => {
   const pizzas = await getPizzas();
+  const pizzaList = document.querySelector('.pizza__list');
+  pizzaList.textContent = ''; /*почистили списсок*/
+
+  const items = pizzas.map((data) => {
+    const item = document.createElement('li');
+    item.classList.add('pizza__item');
+    const card = createCard(data)  /*создаем карточки*/
+    item.append('card';)
+    return item;
+  })
+
+  pizzaList.append(...items);
 };
 
 const init = () => {
