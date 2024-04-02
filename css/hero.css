@@ -1,18 +1,23 @@
 .hero {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 212px;
   background-image: linear-gradient(47deg, #eb8a14 0%, #ecd55a 100%);
   border-radius: 0 0 16px 16px;
   margin-bottom: 43px;
 }
+
+.hero__container {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 212px;
+}
+
+
 
 .hero__container:after {
   content: '';
   position: absolute;
   z-index: 2;
   bottom: -43px;
-  right: calc(var(--offset-container) + 7px);(+7это от конца пиццы до карточек, ч/з красную линию)
+  right: calc(var(--offset-container) + 7px); /*(+7это от конца пиццы до карточек, ч/з красную линию)*/
   width: calc(100vw / (320 / 261));
   height: calc(100vw / (320 / 230));
   max-width: 382px;
@@ -57,9 +62,13 @@
 
 @media (width >= 620px) {
   .hero {
-    padding: 116px 0 90px;
     border-radius: 0 0 32px 32px;
     margin-bottom: 60px; /*расстояние до конца пиццы*/
+  }
+
+  .hero__container {
+    padding-top: 116px;
+    padding-bottom: 90px;
   }
 
   .hero__content {
@@ -88,8 +97,12 @@
 
 @media (width >= 860px) {
   .hero {
-    padding: 126px 0 80px;
     margin-bottom: 82px; /*расстояние до конца пиццы*/
+  }
+
+  .hero__container {
+    padding-top: 126px;
+    padding-bottom: 80px;
   }
 
   .hero__content {
@@ -106,8 +119,12 @@
 
 @media (width >= 1140px) {
   .hero {
-    padding: 140px 0 100px;
     margin-bottom: 87px; /*расстояние до конца пиццы*/
+  }
+
+  .hero__container {
+    padding-top: 140px;
+    padding-bottom: 100px;
   }
 
   .hero__content {

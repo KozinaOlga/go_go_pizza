@@ -51,6 +51,11 @@
   font-size: 14px;
   color: var(--beige);
   border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.toppings__label:hover {
+  color: var(--orange);
 }
 
 .toppings__checkbox:focus-visible+.toppings__label { 
@@ -62,6 +67,10 @@
 .toppings__checkbox:checked+.toppings__label {
   background: var(--orange);
   color: var(--light);
+}
+
+.toppings__checkbox:checked+.toppings__label:hover {
+  color: var(--white);
 }
 
 @media (width >= 620px) {

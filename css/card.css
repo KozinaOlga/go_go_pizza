@@ -1,6 +1,8 @@
 .card {
   position: relative;
   padding-top: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__image {
@@ -15,6 +17,9 @@
   background: var(--white);
   padding: 48px 8px 8px;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card__title {
@@ -23,13 +28,12 @@
   text-align: center;
   color: var(--dark);
   margin-bottom: 4px;
-
+  flex-grow: 1;
 }
 
 .card__info {
   display: flex;
   justify-content: center;
-  gap: 4px;
   font-size: 14px;
   color: var(--beige);
   margin-bottom: 16px;
@@ -41,6 +45,7 @@
 }
 
 .card__button {
+  display: block;
   width: 100%;
   font-size: 14px;
   color: var(--orange);
